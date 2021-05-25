@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Заголовок №1</h1>
+    <h1>Заголовок №2</h1>
+    <h1>Заголовок №3</h1>
+    <h1>Заголовок №4</h1>
+    <h1>Заголовок №5</h1>
+
+
+    <ul>
+        <li>Элемент №1</li>
+        <li>Элемент №2</li>
+        <li>Элемент №3</li>
+        <li>Элемент №4</li>
+        <li>Элемент №5</li>
+    </ul>
+
+    <div id="test"></div>
+
+    <script>
+
+        var list = document.querySelector('ul');
+        var item = document.createElement('li');
+        item.innerText = 'Вложенный элемент';
+        list.insertBefore(item, list.children[4]);
+        // list.append(item);
+
+        // var a = document.createElement('a');
+        // a.href = 'https://google.com';
+        // a.innerText = 'Перейти в поисковик';
+        // document.querySelector('div').append(a);
+
+        // var elem = document.createElement('script');
+        // elem.innerText = 'alert(111);';
+        // document.querySelector('div').append(elem);
+
+        var text = document.createTextNode('Обычный текст');
+        document.body.append(text);
+
+
+        var headers = document.querySelectorAll('h1');
+        for (var i = 0, size = 15; i < headers.length; i++, size += 15) {
+            if (i % 2 == 0) {
+                headers[i].style.color = 'red';
+            }
+            else {
+                headers[i].style.color = 'blue';
+            }
+            headers[i].style.fontSize = size + 'px';
+            headers[i].id = 'header_' + i;
+            headers[i].setAttribute('class', 'a b c');
+            headers[i].classList.add('d');
+            headers[i].classList.toggle('d');
+            headers[i].classList.remove('c');
+            headers[i].className = 'x';
+        }
+    </script>
+</body>
+
+</html>

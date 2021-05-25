@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="block">
+        <h1 id="header">Заголовок</h1>
+    </div>
+
+    <script>
+        // var header = document.getElementById('header');
+        // var header = document.getElementsByTagName('h1')[0];
+        var header = document.querySelector('#header');
+        header.innerText = 'Тест!!!';
+        // alert(header.innerText);
+
+        var block = document.querySelector('div');
+        for (var i = 0; i < 10; i++) {
+            // block.innerHTML += '<h3>Заголовок №' + (i + 1) + '</h3>';
+            block.insertAdjacentHTML('beforeEnd', '<h3>Заголовок №' + (i + 1) + '</h3>');
+        }
+
+        // header.insertAdjacentHTML('afterEnd', 'Наш новый элемент');
+
+
+    </script>
+</body>
+
+</html>

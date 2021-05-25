@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess</title>
+</head>
+
+<body>
+    <div id="c"></div>
+
+    <script>
+
+
+
+
+        var chess = document.createElement('table');
+        var tr, td;
+        chess.style.fontSize = 40 + 'px';
+        chess.style.textAlign = 'center';
+
+
+
+
+
+
+        var block = document.querySelector('div');
+        block.append(chess);
+
+
+
+        for (var i = 0; i < 10; i++) {
+            tr = document.createElement('tr');
+            chess.append(tr);
+            for (var j = 0; j < 10; j++) {
+                td = document.createElement('td');
+                td.style.width = 60 + 'px';
+                td.style.height = 60 + 'px';
+                tr.append(td);
+
+                if ((j + i) % 2 == 0) {
+                    td.style.background = 'grey';
+                } else {
+                    td.style.background = 'brown';
+                }
+            }
+        }
+
+        td = document.querySelectorAll('td');
+
+        for (var c = 0; c < td.length; c++) {
+            if (c <= 28 && c >= 21) {
+                td[c].innerHTML = '&#9817';
+            }
+            if (c <= 78 && c >= 71) {
+                td[c].innerHTML = '&#9817';
+            }
+            if (c >= 0 && c <= 10 || c > 88 && c <= 99) {
+                td[c].style.background = 'white';
+            }
+        }
+        td[20].style.background = 'white';
+        td[30].style.background = 'white';
+        td[40].style.background = 'white';
+        td[50].style.background = 'white';
+        td[60].style.background = 'white';
+        td[70].style.background = 'white';
+        td[80].style.background = 'white';
+
+        td[19].style.background = 'white';
+        td[29].style.background = 'white';
+        td[39].style.background = 'white';
+        td[49].style.background = 'white';
+        td[59].style.background = 'white';
+        td[69].style.background = 'white';
+        td[79].style.background = 'white';
+        td[89].style.background = 'white';
+
+
+
+        td[12].innerHTML = '&#9816';
+        td[17].innerHTML = '&#9816';
+        td[82].innerHTML = '&#9816';
+        td[87].innerHTML = '&#9816';
+        td[11].innerHTML = '&#9814';
+        td[18].innerHTML = '&#9814';
+        td[88].innerHTML = '&#9814';
+        td[81].innerHTML = '&#9814';
+        td[13].innerHTML = '&#9815';
+        td[16].innerHTML = '&#9815';
+        td[86].innerHTML = '&#9815';
+        td[83].innerHTML = '&#9815';
+        td[85].innerHTML = '&#9812';
+        td[15].innerHTML = '&#9812';
+        td[14].innerHTML = '&#9813';
+        td[84].innerHTML = '&#9813';
+
+        td[1].innerText = 'a';
+        td[2].innerText = 'b';
+        td[3].innerText = 'c';
+        td[4].innerText = 'd';
+        td[5].innerText = 'e';
+        td[6].innerText = 'f';
+        td[7].innerText = 'g';
+        td[8].innerText = 'h';
+
+
+        td[91].innerText = 'a';
+        td[92].innerText = 'b';
+        td[93].innerText = 'c';
+        td[94].innerText = 'd';
+        td[95].innerText = 'e';
+        td[96].innerText = 'f';
+        td[97].innerText = 'g';
+        td[98].innerText = 'h';
+
+        td[10].innerText = '1';
+        td[20].innerText = '2';
+        td[30].innerText = '3';
+        td[40].innerText = '4';
+        td[50].innerText = '5';
+        td[60].innerText = '6';
+        td[70].innerText = '7';
+        td[80].innerText = '8';
+
+
+        td[19].innerText = '1';
+        td[29].innerText = '2';
+        td[39].innerText = '3';
+        td[49].innerText = '4';
+        td[59].innerText = '5';
+        td[69].innerText = '6';
+        td[79].innerText = '7';
+        td[89].innerText = '8';
+
+
+
+
+
+
+
+
+
+        var block = document.querySelector('div');
+        block.append(chess);
+
+
+
+    </script>
+
+</body>
+
+</html>

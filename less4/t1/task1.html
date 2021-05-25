@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+</head>
+
+<body>
+    <script>
+
+        var obj = {
+            number: +prompt('Введите число от 0 до 999'),
+            ed: 0,
+            des: 0,
+            hund: 0
+        };
+
+        if (obj.number <= 9) {
+            obj.ed = obj.number;
+        } else if (obj.number <= 999) {
+            obj.ed = Math.floor(obj.number % 10);
+            obj.des = Math.floor(obj.number / 10 % 10);
+            obj.hund = Math.floor(obj.number / 100 % 10);
+        } else {
+            obj.number = 0;
+            alert('Вы ввели не то число');
+        }
+
+
+        console.log(obj);
+        alert('единицы: ' + obj.ed + ' десятки: ' + obj.des + ' сотни: ' + obj.hund);
+
+    </script>
+
+</body>
+
+</html>
